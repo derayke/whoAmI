@@ -1,3 +1,4 @@
+// forked from phi's "tmlib.js examples - Magic Square" http://jsdo.it/phi/b1p8
 // forked from phi's "tmlib.js template" http://jsdo.it/phi/jko1
 
 /*
@@ -76,10 +77,12 @@ var MagicSquareSprite = tm.createClass({
     
     rendererCanvas: function() {
         var canvas = this.canvas;
+        var hue    = tm.util.Random.randint(0, 360);
+        var hsl    = "hsl({0}, 75%, 50%)".format(hue);
         
         canvas.setTransformCenter();
-        canvas.fillStyle  = "hsl(60, 75%, 50%)";
-        canvas.strokeStyle= "hsl(60, 75%, 50%)";
+        canvas.fillStyle  = hsl;
+        canvas.strokeStyle= hsl;
         // 星
         canvas.lineWidth = 2;
         canvas.strokeStar(0, 0, this.radius, 5);
