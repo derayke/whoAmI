@@ -9,10 +9,15 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	
 </head>
 <body class="backgroundImg">
+<!--Magic_S-->
+<canvas id='world' ></canvas>
+<!--Magic_E-->
 <div class="container" >
-    <div class="row">
+	<!---------First Page---------->
+    <div class="row" style="display:none;">
         <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
 			<div class="row">
 				<div class=" visible-md col-md-8 visible-lg col-lg-8">
@@ -59,7 +64,7 @@
 								</div>
 							</div> <!-- end front panel -->
 							<div class="back">
-								<div class="cover">
+								<!--<div class="cover">
 									<img src="images/rotating_card_thumb.png"/>
 								</div>
 								<div class="user">
@@ -74,11 +79,12 @@
 										<h5><i class="fa fa-envelope-o fa-fw text-muted"></i> mike@creative-tim.com</h5>
 									</div>
 									<div class="footer">
-										<button class="btn btn-simple" onclick="rotateCard(this)">
-											<i class="fa fa-mail-forward"></i> Manual Flip
-										</button>
+										
 									</div>
-								</div>
+								</div>-->
+								<button class="btn btn-simple" onclick="rotateCard(this)">
+									<i class="fa fa-mail-forward"></i> Manual Flip
+								</button>
 							</div> <!-- end back panel -->
 						</div> <!-- end card -->
 					</div> <!-- end card-container -->
@@ -86,18 +92,168 @@
 			</div>
         </div>  
     </div> <!-- end row -->
-    <!--<div class="space-200"></div>-->    
+	
+	
+	<!---------Second Page---------->
+	
+	
+	
+	<!--Cards_S-->
+	<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+			<div class="row">
+				<!-----Card One------->
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					 <div id="rs_card1" class="card-container manual-flip hover">
+						<div class="card">
+							<div class="front frontBackground">
+								<div class="cover" >
+								   <!--<img src="images/index_box.jpg"/> height:90px-->
+								</div>
+								 <div class="user">
+									<img class="img-circle" src="images/index_circle.jpg"/>
+								</div>
+								<div class="content">
+									<div class="main">
+										<div class="form-group cfont1">
+											<label for="name" >姓名:</label>
+											<input type="text" class="form-control" id="name">
+											<label for="birthday">生日:</label>
+											<input type="password" class="form-control" id="birthday">
+											<label for="sex">性別:</label>
+											<input type="password" class="form-control" id="sex">
+										</div>
+									</div>
+									</div>
+								<div class="footer">
+									
+									<div class="social-links text-center">
+										
+										<!-- <label class="fa pull-left fa-fw">分享</label> -->
+										<a  href="http://cretive-tim.com" class="facebook"><i style="padding-left:20px; padding-top:5px;" class="fa fa-facebook-square fa-fw pull-left fa-2x " ></i></a>
+										
+										<!-- <label class="fa pull-right fa-fw">送出</label> -->
+										<a  ><i style="padding-right:20px;  padding-top:5px;" class="facebook fa fa-arrow-circle-right fa-fw pull-right fa-2x" rel="tooltip" title="Next Step" onclick="rotateCard(this)"></i></a>
+									</div>
+								</div>
+							</div> <!-- end front panel -->
+							<div class="back" style="background-color:#222222;">
+								<button class="btn btn-simple" onclick="rotateCard(this)">
+									<i class="fa fa-mail-forward"></i> Manual Flip
+								</button>
+							</div> <!-- end back panel -->
+						</div> <!-- end card -->
+					</div> <!-- end card-container -->
+				</div> <!-- end col sm 3 -->
+				
+				<!-----Card Two------->
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					 <div id="rs_card2" class="card-container manual-flip hover">
+						<div class="card">
+							<div class="front frontBackground">
+								<div class="cover" >
+								   <!--<img src="images/index_box.jpg"/> height:90px-->
+								</div>
+								 <div class="user">
+									<img class="img-circle" src="images/index_circle.jpg"/>
+								</div>
+								<div class="content">
+									<div class="main">
+										<div class="form-group cfont1">
+											<label for="name" >姓名:</label>
+											<input type="text" class="form-control" id="name">
+											<label for="birthday">生日:</label>
+											<input type="password" class="form-control" id="birthday">
+											<label for="sex">性別:</label>
+											<input type="password" class="form-control" id="sex">
+										</div>
+									</div>
+									</div>
+								<div class="footer">
+									
+									<div class="social-links text-center">
+										
+										<!-- <label class="fa pull-left fa-fw">分享</label> -->
+										<a  href="http://cretive-tim.com" class="facebook"><i style="padding-left:20px; padding-top:5px;" class="fa fa-facebook-square fa-fw pull-left fa-2x " ></i></a>
+										
+										<!-- <label class="fa pull-right fa-fw">送出</label> -->
+										<a  ><i style="padding-right:20px;  padding-top:5px;" class="facebook fa fa-arrow-circle-right fa-fw pull-right fa-2x" rel="tooltip" title="Next Step" onclick="rotateCard(this)"></i></a>
+									</div>
+								</div>
+							</div> <!-- end front panel -->
+							<div class="back" style="background-color:#222222;">
+								<button class="btn btn-simple" onclick="rotateCard(this)">
+									<i class="fa fa-mail-forward"></i> Manual Flip
+								</button>
+							</div> <!-- end back panel -->
+						</div> <!-- end card -->
+					</div> <!-- end card-container -->
+				</div> <!-- end col sm 3 -->
+				
+				<!-----Card Three------->
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					 <div id="rs_card3" class="card-container manual-flip hover">
+						<div class="card">
+							<div class="front frontBackground">
+								<div class="cover" >
+								   <!--<img src="images/index_box.jpg"/> height:90px-->
+								</div>
+								 <div class="user">
+									<img class="img-circle" src="images/index_circle.jpg"/>
+								</div>
+								<div class="content">
+									<div class="main">
+										<div class="form-group cfont1">
+											<label for="name" >姓名:</label>
+											<input type="text" class="form-control" id="name">
+											<label for="birthday">生日:</label>
+											<input type="password" class="form-control" id="birthday">
+											<label for="sex">性別:</label>
+											<input type="password" class="form-control" id="sex">
+										</div>
+									</div>
+									</div>
+								<div class="footer">
+									
+									<div class="social-links text-center">
+										
+										<!-- <label class="fa pull-left fa-fw">分享</label> -->
+										<a  href="http://cretive-tim.com" class="facebook"><i style="padding-left:20px; padding-top:5px;" class="fa fa-facebook-square fa-fw pull-left fa-2x " ></i></a>
+										
+										<!-- <label class="fa pull-right fa-fw">送出</label> -->
+										<a  ><i style="padding-right:20px;  padding-top:5px;" class="facebook fa fa-arrow-circle-right fa-fw pull-right fa-2x" rel="tooltip" title="Next Step" onclick="rotateCard(this)"></i></a>
+									</div>
+								</div>
+							</div> <!-- end front panel -->
+							<div class="back" style="background-color:#222222;">
+								<button class="btn btn-simple" onclick="rotateCard(this)">
+									<i class="fa fa-mail-forward"></i> Manual Flip
+								</button>
+							</div> <!-- end back panel -->
+						</div> <!-- end card -->
+					</div> <!-- end card-container -->
+				</div> <!-- end col sm 3 -->
+			</div>
+		</div>
+	<!--Cards_E-->
+				
 </div>
 
 
 
 <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/tmlibv0.1.1.js" type="text/javascript"></script>
+<script src="js/tmlib_runner.js" type="text/javascript"></script>
 	
 <script type="text/javascript">
     $().ready(function(){
         $('[rel="tooltip"]').tooltip();
         
+		var cari = 1;
+		setInterval(function(){
+			$("#rs_card"+cari).removeClass("hover");
+			cari++;
+		},100);
     });
     
     function rotateCard(btn){
@@ -109,6 +265,8 @@
             $card.addClass('hover');
         }
     }
+
+
 </script>
 
 </body>
