@@ -9,17 +9,45 @@
 	height:100%;
 }
 
-.frontBackground{
+.inputFormBg{
 	background-color: #cccccc;
 	background-image:  url("../images/background.jpg");
 	background-repeat: no-repeat;
 	background-size:100% 490px;
 }
+.resultFrontBg{
+	background-color: #cccccc;
+	background-image:  url("../images/result_card_content.png");
+	background-repeat: no-repeat;
+	background-size:100% 490px;
+}
 
 .backgroundImg{
-	background-color: #bbbbbb;
+	background-color: #cccccc;
 }
 
 .cfont1{
 	color: #ffffff;
+}
+
+.secdFoot{
+	 /* 設定footer的高度 */
+    height: 40px;
+    box-sizing: border-box;
+    /* 設定footer絕對位置在底部 */
+    position: absolute;
+    /* 展開footer寬度 */
+    width: 100%;
+	margin-left:30px;
+	margin-top:10px;
+	float:right
+}
+
+.itemIcon{
+	border-radius: 50%;
+    display: block;
+    height: 120px;
+    margin: 10px auto 0;
+    overflow: hidden;
+    width: 120px;
 }

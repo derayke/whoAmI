@@ -27,7 +27,7 @@ var MagicSquareSprite = tm.createClass({
         this.radius    = 80;
         this.blendMode = "lighter";
         
-        // this.setupAnim();
+        this.setupAnim();
         this.rendererCanvas();
     },
     
@@ -98,7 +98,7 @@ var MagicSquareSprite = tm.createClass({
         // 外側の円
         canvas.strokeCircle(0, 0, this.radius*1.35);
         
-        var text = "Time is money. Time is money. Time";
+        var text = "好棒棒*好棒棒*好棒棒*好棒棒*好棒棒*好棒棒*好棒棒*好棒棒*好棒棒*";
         canvas.lineWidth = 1;
         for (var i=0,len=text.length; i<len; ++i) {
             canvas.save();
@@ -111,9 +111,9 @@ var MagicSquareSprite = tm.createClass({
 
 });
 
-
+var app
 tm.main(function() {
-    var app = tm.app.CanvasApp("#world");
+    app = tm.app.CanvasApp("#world");
     app.width = window.innerWidth;
     app.height = window.innerHeight;
     // app.resize(screen.availWidth, screen.availHeight);
@@ -131,12 +131,12 @@ tm.main(function() {
     };
     
     // あらかじめいくつか生成しておく
-    // for (var i=0; i<16; ++i) {
-    //     var ms = MagicSquareSprite();
-    //     ms.x = tm.util.Random.randint(0, SCREEN_WIDTH);
-    //     ms.y = tm.util.Random.randint(0, SCREEN_HEIGHT);;
-    //     ms.addChildTo(app.currentScene);
-    // }
+     for (var i=0; i<20; ++i) {
+         var ms = MagicSquareSprite();
+        ms.x = tm.util.Random.randint(0, SCREEN_WIDTH);
+         ms.y = tm.util.Random.randint(0, SCREEN_HEIGHT);;
+         ms.addChildTo(app.currentScene);
+     }
     
     app.update = function() {
         var scene = this.currentScene;
@@ -149,7 +149,5 @@ tm.main(function() {
     // mdlclick でキャプチャ
     tm.dom.Element(app.getElement()).event.mdlclick(function() {
         app.canvas.saveAsImage();
-    });
-    
-    app.run();
+    });    
 });
