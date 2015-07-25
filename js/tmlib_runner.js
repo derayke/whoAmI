@@ -9,8 +9,9 @@
 /*
  * 定数
  */
-var SCREEN_WIDTH    = 640;
-var SCREEN_HEIGHT   = 640;
+
+var SCREEN_WIDTH    = Math.max(screen.width, screen.height);
+var SCREEN_HEIGHT   = Math.max(screen.width, screen.height);
 
 
 /**
@@ -21,12 +22,12 @@ var MagicSquareSprite = tm.createClass({
     superClass: tm.app.Sprite,
     
     init: function() {
-        this.superInit(150, 150);
+        this.superInit(250, 250);
         
-        this.radius    = 50;
+        this.radius    = 80;
         this.blendMode = "lighter";
         
-        this.setupAnim();
+        // this.setupAnim();
         this.rendererCanvas();
     },
     
@@ -85,14 +86,14 @@ var MagicSquareSprite = tm.createClass({
         canvas.strokeStyle= hsl;
         // 星
         canvas.lineWidth = 2;
-        canvas.strokeStar(0, 0, this.radius, 5);
+        canvas.strokeStar(0, 0, this.radius, 6);
         canvas.lineWidth = 1;
         // ５角形
-        canvas.strokePolygon(0, 0, this.radius, 5);
+        canvas.strokePolygon(0, 0, this.radius, 6);
         // 円
         canvas.strokeCircle(0, 0, this.radius);
         // 内側の円
-        canvas.strokeCircle(0, 0, this.radius*0.8);
+        canvas.strokeCircle(0, 0, this.radius);
         canvas.lineWidth = 4;
         // 外側の円
         canvas.strokeCircle(0, 0, this.radius*1.35);
@@ -113,7 +114,9 @@ var MagicSquareSprite = tm.createClass({
 
 tm.main(function() {
     var app = tm.app.CanvasApp("#world");
-    app.resize(640, 640);
+    app.width = window.innerWidth;
+    app.height = window.innerHeight;
+    // app.resize(screen.availWidth, screen.availHeight);
     app.fitWindow();
     //app.enableStats();
     app.background = "rgba(0, 0, 0, 0.25)";
@@ -128,12 +131,12 @@ tm.main(function() {
     };
     
     // あらかじめいくつか生成しておく
-    for (var i=0; i<16; ++i) {
-        var ms = MagicSquareSprite();
-        ms.x = tm.util.Random.randint(0, SCREEN_WIDTH);
-        ms.y = tm.util.Random.randint(0, SCREEN_HEIGHT);;
-        ms.addChildTo(app.currentScene);
-    }
+    // for (var i=0; i<16; ++i) {
+    //     var ms = MagicSquareSprite();
+    //     ms.x = tm.util.Random.randint(0, SCREEN_WIDTH);
+    //     ms.y = tm.util.Random.randint(0, SCREEN_HEIGHT);;
+    //     ms.addChildTo(app.currentScene);
+    // }
     
     app.update = function() {
         var scene = this.currentScene;
