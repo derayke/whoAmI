@@ -7,11 +7,45 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-	
+	<script type="text/javascript">
+		Parse.initialize("hT986QiO8vO69LYF0BAvwPLCQHyy2oEBhWojyMfM", "S37dBB54iyEGCtVg9gX8S8NWSRG0prjm29VeWQW3");
+
+		// var TestObject = Parse.Object.extend("TestObject");
+		// var testObject = new TestObject();
+		// testObject.save({foo: "bar"}).then(function(object) {
+		//   alert("yay! it worked");
+		// });
+
+		var GameScore = Parse.Object.extend("TestObject");
+		var query = new Parse.Query(GameScore);
+		query.get("xa96SZmyVq", {
+		  success: function(gameScore) {
+		  	console.log(gameScore);
+		    // The object was retrieved successfully.
+		  },
+		  error: function(object, error) {
+		    // The object was not retrieved successfully.
+		    // error is a Parse.Error with an error code and message.
+		  }
+		});
+	</script>
+	<script src="//connect.facebook.net/en_US/all.js"></script>
 </head>
 <body class="backgroundImg">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '416613101860781',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+// console.log("uuuu");
+     $(document).trigger('fbload');
+  };
+
+</script>
 <!--Magic_S-->
 <canvas id='world' style="z-index:0;"></canvas>
 <!--Magic_E-->
@@ -54,7 +88,7 @@
 								<div class="footer">
 									<div class="social-links text-center">
 										<!-- <label class="fa pull-left fa-fw">分享</label> -->
-										<a  href="http://cretive-tim.com" class="facebook"><i style="padding-left:20px; padding-top:5px;" class="fa fa-facebook-square fa-fw pull-left fa-2x " ></i></a>
+										<a href="javascript: void(0)" class="facebook"><i style="padding-left:20px; padding-top:5px;" class="fa fa-facebook-square fa-fw pull-left fa-2x " ></i></a>
 										<!-- <label class="fa pull-right fa-fw">送出</label> -->
 										<a  ><i style="padding-right:20px;  padding-top:5px;" class="facebook fa fa-arrow-circle-right fa-fw pull-right fa-2x" rel="tooltip" title="Next Step" onclick="nextStep()"></i></a>
 									</div>
@@ -172,7 +206,6 @@
 											<a><img rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/></a>
 											</tr>
 										</table>
-										
 									</div>
 								</div>
 							</div> <!-- end front panel -->
@@ -353,6 +386,19 @@ var maxCardN = 4;
     }
 	
 
+</script>
+
+<script type="text/javascript">
+  $(function() {
+
+  	$('.facebook').click(function()
+	{
+  		FB.ui({
+		  method: 'share',
+		  href: 'https://developers.facebook.com/docs/',
+		}, function(response){});
+  	});
+  });
 </script>
 
 </body>
