@@ -7,9 +7,30 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-	
+	<script type="text/javascript">
+		Parse.initialize("hT986QiO8vO69LYF0BAvwPLCQHyy2oEBhWojyMfM", "S37dBB54iyEGCtVg9gX8S8NWSRG0prjm29VeWQW3");
+
+		// var TestObject = Parse.Object.extend("TestObject");
+		// var testObject = new TestObject();
+		// testObject.save({foo: "bar"}).then(function(object) {
+		//   alert("yay! it worked");
+		// });
+
+		var GameScore = Parse.Object.extend("TestObject");
+		var query = new Parse.Query(GameScore);
+		query.get("xa96SZmyVq", {
+		  success: function(gameScore) {
+		  	console.log(gameScore);
+		    // The object was retrieved successfully.
+		  },
+		  error: function(object, error) {
+		    // The object was not retrieved successfully.
+		    // error is a Parse.Error with an error code and message.
+		  }
+		});
+	</script>
 </head>
 <body class="backgroundImg">
 <!--Magic_S-->
