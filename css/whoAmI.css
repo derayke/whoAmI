@@ -81,3 +81,24 @@
 	right:-90px;
 	z-index:100;
 }
+
+.prodNTitle{
+	font-weight: bold;
+	font-size: 28px !important;
+}
+
+.onlyTextCard{
+	margin-top:50% !important;
+}
+.shareBtn{
+	
+}
+.outsidebtn{
+	background-color: #ffffff;
+	width:60px !important;
+	height:62px !important;
+	border-radius:10px;
+	padding-bottom:8px !important;
+	
+
+}
