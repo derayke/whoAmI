@@ -74,3 +74,10 @@
 	vertical-align: bottom;
 	color: red !important;
 }
+
+.shareBtn{
+	position:absolute;
+	bottom:30px;
+	right:-90px;
+	z-index:100;
+}

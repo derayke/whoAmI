@@ -262,6 +262,8 @@
 						</div> <!-- end card -->
 					</div> <!-- end card-container -->
 				</div> <!-- end col sm 3 -->
+				
+				<a onclick="" class="facebook "><i class="shareBtn fa fa-facebook-square  fa-fw fa-5x"></i></a>
 			</div>
 		</div>
 	<!--Cards_E-->
@@ -292,6 +294,7 @@ var maxCardN = 4;
         $('[rel="tooltip"]').tooltip();
         
 		//test_S
+		/*
 		$("#page1").hide();
 		$("#page2").show();
 		var cari = 1;
@@ -313,7 +316,7 @@ var maxCardN = 4;
 		$("#prom"+3).html(srcAry[RandomIndex[1]].promo);
 		$("#prodN"+1).html(srcAry[RandomIndex[0]].name);
 		$("#prodN"+3).html(srcAry[RandomIndex[1]].name);
-		
+		*/
 		//test_E
     });
 	
@@ -322,8 +325,12 @@ var maxCardN = 4;
 		$('body').css({'background-color':'#ffffff'});
 		$("#world").css({"z-index":1000});
 		setTimeout(function(){
-			$("#card"+1+"itemImg").prop('src','images\imgtest\images\\'+srcAry[RandomIndex[0]].imgSrc);
-			$("#card"+4+"itemImg").prop('src','images\imgtest\images\\'+srcAry[RandomIndex[1]].imgSrc);
+			$("#card"+1+"itemImg").prop('src','images\\imgtest\\images\\'+srcAry[RandomIndex[0]].imgSrc);
+			$("#card"+3+"itemImg").prop('src','images\\imgtest\\images\\'+srcAry[RandomIndex[1]].imgSrc);
+			$("#prom"+1).html(srcAry[RandomIndex[0]].promo);
+			$("#prom"+3).html(srcAry[RandomIndex[1]].promo);
+			$("#prodN"+1).html(srcAry[RandomIndex[0]].name);
+			$("#prodN"+3).html(srcAry[RandomIndex[1]].name);
 			
 			app.run();
 			showResultCard();
