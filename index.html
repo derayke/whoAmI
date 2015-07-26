@@ -7,31 +7,8 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-	<script type="text/javascript">
-		Parse.initialize("hT986QiO8vO69LYF0BAvwPLCQHyy2oEBhWojyMfM", "S37dBB54iyEGCtVg9gX8S8NWSRG0prjm29VeWQW3");
-
-		// var TestObject = Parse.Object.extend("TestObject");
-		// var testObject = new TestObject();
-		// testObject.save({foo: "bar"}).then(function(object) {
-		//   alert("yay! it worked");
-		// });
-
-		var GameScore = Parse.Object.extend("TestObject");
-		var query = new Parse.Query(GameScore);
-		query.get("xa96SZmyVq", {
-		  success: function(gameScore) {
-		  	console.log(gameScore);
-		    // The object was retrieved successfully.
-		  },
-		  error: function(object, error) {
-		    // The object was not retrieved successfully.
-		    // error is a Parse.Error with an error code and message.
-		  }
-		});
-	</script>
-	<script src="//connect.facebook.net/en_US/all.js"></script>
+	<script src="https://connect.facebook.net/en_US/all.js"></script>
 </head>
 <body class="backgroundImg">
 <script>
@@ -79,7 +56,7 @@
 											<label for="name" >姓名:</label>
 											<input type="text" class="form-control" id="name">
 											<label for="birthday">生日:</label>
-											<input type="password" class="form-control" id="birthday">
+											<input type="text" class="form-control" id="birthday">
 											<label for="sex">性別:</label>
 											<input type="password" class="form-control" id="sex">
 										</div>
@@ -143,29 +120,25 @@
 								
 								<div class="content">
 									 <div class="main">
-										<div><h3 id="prodN" class="name">鍋子</h3></div>
+										<div><h3 id="prodN1" class="name">鍋子</h3></div>
 										<div>
-											<img class=" itemIcon img-circle" src="images/index_circle.jpg"/>
+											<img  id="card1itemImg" class=" itemIcon img-circle" src="images/index_circle.jpg"/>
 										</div>
-										<div class="space-50"></div> 
+										<div class="spaceDRK"></div> 
 									</div>
 									<div class="secdFoot ">
-										<table>
-											<tr>
-												<td>
-													<h5><i class="text-muted pull-right"></i> Paris, France</h5>
-													<h5><i class="text-muted pull-right"></i> Creative Tim Inc. </h5>
-													<h5><i class="text-muted pull-right"></i> john@creative-tim</h5>
-												</td>
-												<td>
-													<a><img rel="tooltip" title="Buy me!" class="btn btn-simple pull-right img-circle" src="images/card_buy.png"/></a>
-												</td>
-											</tr>
-										</table>
+										<span>
+											<h5><i class="text-muted pull-right"></i> Paris, France</h5>
+											<h5><i class="text-muted pull-right"></i> Creative Tim Inc. </h5>
+											<h5><i class="text-muted pull-right"></i> john@creative-tim</h5>
+										</span>
+										<span>
+											<a><img rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/></a>
+										</span>
 									</div>
 								</div>
 							</div> <!-- end front panel -->
-							<div class="back" style="background-color:#222222;">
+							<div class="back BackBg" style="background-color:#222222;">
 								<button class="btn btn-simple" onclick="rotateCard(this)">
 									<i class="fa fa-mail-forward"></i> Manual Flip
 								</button>
@@ -185,31 +158,25 @@
 								
 								<div class="content">
 									 <div class="main">
-										<div><h3 id="prodN" class="name">鍋子</h3></div>
+										<div><h3 id="prodN2" class="name">鍋子</h3></div>
 										<div>
-											<img class=" itemIcon img-circle" src="images/index_circle.jpg"/>
+											<h3 id="itemIcon img-circle action" class="name">加上</h3>
 										</div>
-										<div class="space-50"></div> 
+										<div class="spaceDRK"></div> 
 									</div>
 									<div class="secdFoot ">
-										<table>
-											
-											
-											<tr>
-												<td>
-													<h5><i class="text-muted pull-right"></i> Paris, France</h5>
-													<h5><i class="text-muted pull-right"></i> Creative Tim Inc. </h5>
-													<h5><i class="text-muted pull-right"></i> john@creative-tim</h5>
-												</td
-											</tr>
-											<tr>
+										<span>
+											<h5><i class="text-muted pull-right"></i> Paris, France</h5>
+											<h5><i class="text-muted pull-right"></i> Creative Tim Inc. </h5>
+											<h5><i class="text-muted pull-right"></i> john@creative-tim</h5>
+										</span>
+										<span>
 											<a><img rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/></a>
-											</tr>
-										</table>
+										</span>
 									</div>
 								</div>
 							</div> <!-- end front panel -->
-							<div class="back" style="background-color:#222222;">
+							<div class="back BackBg" style="background-color:#222222;">
 								<button class="btn btn-simple" onclick="rotateCard(this)">
 									<i class="fa fa-mail-forward"></i> Manual Flip
 								</button>
@@ -231,27 +198,23 @@
 									 <div class="main">
 										<div><h3 id="prodN" class="name">鍋子</h3></div>
 										<div>
-											<img class=" itemIcon img-circle" src="images/index_circle.jpg"/>
+											<img  id="card3itemImg" class=" itemIcon img-circle" src="images/index_circle.jpg"/>
 										</div>
-										<div class="space-50"></div> 
+										<div class="spaceDRK"></div> 
 									</div>
 									<div class="secdFoot ">
-										<table>
-											<tr>
-												<td>
-													<h5><i class="text-muted pull-right"></i> Paris, France</h5>
-													<h5><i class="text-muted pull-right"></i> Creative Tim Inc. </h5>
-													<h5><i class="text-muted pull-right"></i> john@creative-tim</h5>
-												</td>
-												<td>
-													<a><img rel="tooltip" title="Buy me!" class="btn btn-simple pull-right img-circle" src="images/card_buy.png"/></a>
-												</td>
-											</tr>
-										</table>
+										<span>
+											<h5><i class="text-muted pull-right"></i> Paris, France</h5>
+											<h5><i class="text-muted pull-right"></i> Creative Tim Inc. </h5>
+											<h5><i class="text-muted pull-right"></i> john@creative-tim</h5>
+										</span>
+										<span>
+											<a><img rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/></a>
+										</span>
 									</div>
 								</div>
 							</div> <!-- end front panel -->
-							<div class="back" style="background-color:#222222;">
+							<div class="back BackBg" style="background-color:#222222;">
 								<button class="btn btn-simple" onclick="rotateCard(this)">
 									<i class="fa fa-mail-forward"></i> Manual Flip
 								</button>
@@ -274,27 +237,23 @@
 									 <div class="main">
 										<div><h3 id="prodN" class="name">鍋子</h3></div>
 										<div>
-											<img class=" itemIcon img-circle" src="images/index_circle.jpg"/>
+											<h3 id="itemIcon img-circle action" class="name">好棒棒</h3>
 										</div>
-										<div class="space-50"></div> 
+										<div class="spaceDRK"></div> 
 									</div>
 									<div class="secdFoot ">
-										<table>
-											<tr>
-												<td>
-													<h5><i class="text-muted pull-right"></i> Paris, France</h5>
-													<h5><i class="text-muted pull-right"></i> Creative Tim Inc. </h5>
-													<h5><i class="text-muted pull-right"></i> john@creative-tim</h5>
-												</td>
-												<td>
-													<a><img rel="tooltip" title="Buy me!" class="btn btn-simple pull-right img-circle" src="images/card_buy.png"/></a>
-												</td>
-											</tr>
-										</table>
+										<span>
+											<h5><i class="text-muted pull-right"></i> Paris, France</h5>
+											<h5><i class="text-muted pull-right"></i> Creative Tim Inc. </h5>
+											<h5><i class="text-muted pull-right"></i> john@creative-tim</h5>
+										</span>
+										<span>
+											<a><img rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/></a>
+										</span>
 									</div>
 								</div>
 							</div> <!-- end front panel -->
-							<div class="back" style="background-color:#222222;">
+							<div class="back BackBg" style="background-color:#222222;">
 								<button class="btn btn-simple" onclick="rotateCard(this)">
 									<i class="fa fa-mail-forward"></i> Manual Flip
 								</button>
@@ -316,12 +275,25 @@
 <script src="js/tmlib_runner.js" type="text/javascript"></script>
 	
 <script type="text/javascript">
+
+var srcAry =	[{"imgSrc":"1.jpg","name":"鰹魚調味料","promo":"該品牌單筆指定品滿150送15現金紅利","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?s_id=f9897fe9bacfb5f718bf711e7a1d738b"}
+				,{"imgSrc":"2.jpg","name":"靠得住","promo":"大促銷$149元","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?s_id=bf19a2a50bb1208b257ac4c6fd5c91c0"}
+				,{"imgSrc":"3.jpg","name":"100%純橄欖油","promo":"","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?t_s_id=43013&s_id=717123634b662e150798d4667d3c6047"}
+				,{"imgSrc":"4.jpg","name":"青蔥蘇打餅乾","promo":"","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?t_s_id=41592&s_id=4266242f39cfc67bda72e62f7e050b92"}
+				,{"imgSrc":"5.jpg","name":"堅果山核桃","promo":"熱賣商品","url":""}
+				,{"imgSrc":"6.jpg","name":"鮮奶油","promo":"熱賣商品","url":""}
+				,{"imgSrc":"7.jpg","name":"紅燒鰻","promo":"","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?s_id=9684a1353c4b44f0342ac73cf2da1d46"}]
+var RandomIndex = [5,6];
+
+
 var maxCardN = 4;
     $().ready(function(){
         $('[rel="tooltip"]').tooltip();
         
 		//test
-		/*var cari = 1;
+		$("#page1").hide();
+		$("#page2").show();
+		var cari = 1;
 		setTimeout(function(){
 			//app.stop();
 			$("#world").css({"z-index":0});
@@ -332,11 +304,7 @@ var maxCardN = 4;
 					clearInterval(showCardTimer);
 				}
 			},100);
-		},2400);*/
-		
-		
-		
-		
+		},2400);
     });
 	
 	function nextStep(){
@@ -344,6 +312,9 @@ var maxCardN = 4;
 		$('body').css({'background-color':'#ffffff'});
 		$("#world").css({"z-index":1000});
 		setTimeout(function(){
+			$("#card"+1+"itemImg").prop('src','images\imgtest\images\\'+srcAry[RandomIndex[0]]);
+			$("#card"+4+"itemImg").prop('src','images\imgtest\images\\'+srcAry[RandomIndex[1]]);
+			
 			app.run();
 			showResultCard();
 		},1000);

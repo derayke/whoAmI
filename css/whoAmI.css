@@ -39,8 +39,7 @@
     /* 展開footer寬度 */
     width: 100%;
 	margin-left:30px;
-	margin-top:10px;
-	float:right
+	
 }
 
 .itemIcon{
@@ -50,4 +49,17 @@
     margin: 10px auto 0;
     overflow: hidden;
     width: 120px;
+}
+
+.BackBg{
+	background-color: #cccccc;
+	background-image:  url("../images/card_2.jpg");
+	background-repeat: no-repeat;
+	background-size:100% 490px;
+}
+
+.spaceDRK{
+	height: 20px;
+    display: block;
+	
 }
