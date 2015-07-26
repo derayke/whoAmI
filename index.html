@@ -13,7 +13,7 @@
 		<meta property="og:title" content="你的人生就像是">
 	<meta property="og:description" content="紅燒鰻 混合 堅果山核桃 好勵志～">
 	<meta property="og:url" content="http://45.55.194.174/whoAmI/">
-	<meta property="og:image" content="http://45.55.194.174/whoAmI/images/imgtest/result/r2.jpg">
+	<meta property="og:image" content="http://45.55.194.174/whoAmI/images/r2.jpg">
 	<meta property="og:image:height" content="630">
 	<meta property="og:type" content="article">
 	<meta property="og:image:width" content="1200">
@@ -263,7 +263,7 @@
 					</div> <!-- end card-container -->
 				</div> <!-- end col sm 3 -->
 				
-				<a onclick="" class="facebook "><i class="shareBtn fa fa-facebook-square  fa-fw fa-5x"></i></a>
+				<a onclick="shareFB()" class="facebook "><i class="shareBtn fa fa-facebook-square  fa-fw fa-5x"></i></a>
 			</div>
 		</div>
 	<!--Cards_E-->
@@ -373,21 +373,14 @@ var maxCardN = 4;
         }
     }
 	
-
-</script>
-
-<script type="text/javascript">
-  $(function() {
-
-  	$('.facebook').click(function()
-	{
-  		FB.ui({
+	function shareFB(){
+		FB.ui({
 		  method: 'share',
 		  href: 'http://45.55.194.174/whoAmI/index.html',
 		}, function(response){});
-  	});
-  });
-</script>
+	}
+	
 
+</script>
 </body>
 </html>
