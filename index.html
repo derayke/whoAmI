@@ -244,7 +244,10 @@
 									 <div class="main">
 										<div><h3 id="prodN4" class="name">好勵志~</h3></div>
 										<div class="textblock">
-											<h3 id="itemIcon img-circle action" class="name"></h3>
+											<h3 id="itemIcon img-circle action" class="name">
+											<!--<a onclick="shareFB()"  class="facebook "><i class="fa fa-facebook-square  fa-fw fa-5x"></i></a>
+											--></h3>
+											
 										</div>
 										<div class="spaceDRK"></div> 
 									</div>
@@ -262,7 +265,9 @@
 					</div> <!-- end card-container -->
 				</div> <!-- end col sm 3 -->
 				
-				<a onclick="shareFB()" class="facebook "><i class="shareBtn fa fa-facebook-square  fa-fw fa-5x"></i></a>
+				<a onclick="shareFB()"  class="facebook ">
+				<i class="shareBtn fa fa-facebook-square  fa-fw fa-5x"></i>
+				</a>
 			</div>
 		</div>
 	<!--Cards_E-->
@@ -282,7 +287,7 @@ var srcAry =	[{"imgSrc":"1.jpg","name":"鰹魚調味料","promo":"該品牌單�
 				,{"imgSrc":"2.jpg","name":"靠得住","promo":"大促銷$149元","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?s_id=bf19a2a50bb1208b257ac4c6fd5c91c0"}
 				,{"imgSrc":"3.jpg","name":"100%純橄欖油","promo":"","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?t_s_id=43013&s_id=717123634b662e150798d4667d3c6047"}
 				,{"imgSrc":"4.jpg","name":"青蔥蘇打餅乾","promo":"","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?t_s_id=41592&s_id=4266242f39cfc67bda72e62f7e050b92"}
-				,{"imgSrc":"5.jpg","name":"堅果山核桃","promo":"熱賣商品","url":""}
+				,{"imgSrc":"5.jpg","name":"堅果山核桃","promo":"熱賣商品","url":"http://detail.tmall.com/item.htm?id=16204910274"}
 				,{"imgSrc":"6.jpg","name":"鮮奶油","promo":"熱賣商品","url":""}
 				,{"imgSrc":"7.jpg","name":"紅燒鰻","promo":"","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?s_id=9684a1353c4b44f0342ac73cf2da1d46"}]
 var RandomIndex = [6,4];
@@ -309,12 +314,25 @@ var maxCardN = 4;
 			},100);
 		},100);
 		
-		$("#card"+1+"itemImg").prop('src','images\\imgtest\\images\\'+srcAry[RandomIndex[0]].imgSrc);
-		$("#card"+3+"itemImg").prop('src','images\\imgtest\\images\\'+srcAry[RandomIndex[1]].imgSrc);
-		$("#prom"+1).html(srcAry[RandomIndex[0]].promo);
-		$("#prom"+3).html(srcAry[RandomIndex[1]].promo);
-		$("#prodN"+1).html(srcAry[RandomIndex[0]].name);
-		$("#prodN"+3).html(srcAry[RandomIndex[1]].name);
+		//img
+			$("#card"+1+"itemImg").prop('src','images\\imgtest\\images\\'+srcAry[RandomIndex[0]].imgSrc);
+			$("#card"+3+"itemImg").prop('src','images\\imgtest\\images\\'+srcAry[RandomIndex[1]].imgSrc);
+			//promo
+			$("#prom"+1).html(srcAry[RandomIndex[0]].promo);
+			$("#prom"+3).html(srcAry[RandomIndex[1]].promo);
+			//porduct Name
+			$("#prodN"+1).html(srcAry[RandomIndex[0]].name);
+			$("#prodN"+3).html(srcAry[RandomIndex[1]].name);
+			
+			//shop link
+			$("#card"+1+"Shop").on('click',function(){
+				var win = window.open(srcAry[RandomIndex[0]].url, '_blank');
+				win.focus();
+			});
+			$("#card"+3+"Shop").on('click',function(){
+				var win = window.open(srcAry[RandomIndex[1]].url, '_blank');
+				win.focus();
+			});
 		*/
 		//test_E
     });
@@ -324,12 +342,25 @@ var maxCardN = 4;
 		$('body').css({'background-color':'#ffffff'});
 		$("#world").css({"z-index":1000});
 		setTimeout(function(){
+			//img
 			$("#card"+1+"itemImg").prop('src','images\\imgtest\\images\\'+srcAry[RandomIndex[0]].imgSrc);
 			$("#card"+3+"itemImg").prop('src','images\\imgtest\\images\\'+srcAry[RandomIndex[1]].imgSrc);
+			//promo
 			$("#prom"+1).html(srcAry[RandomIndex[0]].promo);
 			$("#prom"+3).html(srcAry[RandomIndex[1]].promo);
+			//porduct Name
 			$("#prodN"+1).html(srcAry[RandomIndex[0]].name);
 			$("#prodN"+3).html(srcAry[RandomIndex[1]].name);
+			
+			//shop link
+			$("#card"+1+"Shop").on('click',function(){
+				var win = window.open(srcAry[RandomIndex[0]].url, '_blank');
+				win.focus();
+			});
+			$("#card"+3+"Shop").on('click',function(){
+				var win = window.open(srcAry[RandomIndex[1]].url, '_blank');
+				win.focus();
+			});
 			
 			app.run();
 			showResultCard();
