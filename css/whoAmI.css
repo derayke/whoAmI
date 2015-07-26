@@ -71,5 +71,6 @@
 .prom{
 	height: 60px;
 	display: block;
-	text-align:center;
+	vertical-align: bottom;
+	color: red !important;
 }

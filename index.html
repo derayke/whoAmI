@@ -138,7 +138,14 @@
 									</div>
 									<div class="secdFoot ">
 										<span>
-											<h3 id="prom1" class="prom"> Prom</h3>
+											<h5 ><i class="text-muted pull-right"></i>
+												<table  class="prom">
+													<tr>
+														<td id="prom1"></td>
+													</tr>
+												</table>
+											
+											</h5>
 										</span>
 										<span>
 											<a><img rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/></a>
@@ -205,7 +212,9 @@
 									</div>
 									<div class="secdFoot ">
 										<span>
-											<h3 id="prom3" class="prom"> Prom</h3>
+											<h5 id="prom3" class="prom"><i class="text-muted pull-right"></i> Prom
+											
+											</h5>
 										</span>
 										<span>
 											<a><img rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/></a>
@@ -302,6 +311,9 @@ var maxCardN = 4;
 		$("#card"+3+"itemImg").prop('src','images\\imgtest\\images\\'+srcAry[RandomIndex[1]].imgSrc);
 		$("#prom"+1).html(srcAry[RandomIndex[0]].promo);
 		$("#prom"+3).html(srcAry[RandomIndex[1]].promo);
+		$("#prodN"+1).html(srcAry[RandomIndex[0]].name);
+		$("#prodN"+3).html(srcAry[RandomIndex[1]].name);
+		
 		//test_E
     });
 	
