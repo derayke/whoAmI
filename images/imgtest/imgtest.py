@@ -35,8 +35,10 @@ def generateImg(data, pos1, pos2):
 
 	draw = ImageDraw.Draw( bg )
 	deepBlue = (0,62,142)
-	draw.text( (430, 282), u"加上", font=font, fill=deepBlue )
-	draw.text( (928, 282), u"好棒棒", font=font, fill=deepBlue )
+	wordCho1=rchoice(words)
+	wordCho2=rchoice(words2)
+	draw.text( (430, 282), wordCho1, font=font, fill=deepBlue )
+	draw.text( (928, 282), wordCho2, font=font, fill=deepBlue )
 
 	drawCenterText(data[pos1]['name'], (85,480))
 	drawCenterText(data[pos2]['name'], (608,480))
@@ -44,8 +46,8 @@ def generateImg(data, pos1, pos2):
 
 
 jsonData=u'[{"name":"鰹魚調味料","promo":"該品牌單筆指定品滿150送15現金紅利","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?s_id=f9897fe9bacfb5f718bf711e7a1d738b"},{"name":"靠得住","promo":"大促銷$149元","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?s_id=bf19a2a50bb1208b257ac4c6fd5c91c0"},{"name":"100%純橄欖油","promo":"","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?t_s_id=43013&s_id=717123634b662e150798d4667d3c6047"},{"name":"青蔥蘇打餅乾","promo":"","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?t_s_id=41592&s_id=4266242f39cfc67bda72e62f7e050b92"},{"name":"堅果山核桃","promo":"熱賣商品","url":""},{"name":"鮮奶油","promo":"熱賣商品","url":""},{"name":"紅燒鰻","promo":"","url":"http://www.savesafe.com.tw/Products/ProductView.aspx?s_id=9684a1353c4b44f0342ac73cf2da1d46"}]'
-words=[u'加上', u'混合', u'搭配']
-words2=[u'好棒棒', u'好厲害', u'猴塞雷', u'好有事', u'搖一搖', u'好壞壞', u'真好人', u'好勵志', u'就甘心']
+words = [u'加上', u'混合', u'搭配']
+words2 = [u'好棒棒', u'好厲害', u'猴塞雷', u'好有事', u'搖一搖', u'好壞壞', u'真好人', u'好勵志', u'就甘心']
 
 data=json.loads(jsonData)
 rset=range(0, len(data))
