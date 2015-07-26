@@ -34,11 +34,6 @@
 	 /* 設定footer的高度 */
     height: 40px;
     box-sizing: border-box;
-    /* 設定footer絕對位置在底部 */
-    position: absolute;
-    /* 展開footer寬度 */
-    width: 100%;
-	margin-left:30px;
 	
 }
 
@@ -68,12 +63,7 @@
 	height: 120px;
 	display: block;
 }
-.prom{
-	height: 60px;
-	display: block;
-	vertical-align: bottom;
-	color: red !important;
-}
+
 
 .shareBtn{
 	position:absolute;
@@ -99,6 +89,30 @@
 	height:62px !important;
 	border-radius:10px;
 	padding-bottom:8px !important;
-	
+	position: relative;
+	top:20px;
+	left:13px;
 
+}
+.prom{
+	width:inherit;
+	display: block;
+	vertical-align: bottom;
+	color: red !important;
+}
+.promHeadSpace{
+	display: block;
+	height: 60px;
+}
+
+{
+   
+}
+.shop{
+    width: 100%;
+	 display: block;
+    height: 120px;
+    margin: -35px auto 0;
+    overflow: hidden;
+    width: 120px;
 }

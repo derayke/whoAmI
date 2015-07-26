@@ -127,29 +127,23 @@
 								<div class="cover" >
 								   <!--<img src="images/index_box.jpg"/> height:90px-->
 								</div>
-								
 								<div class="content">
 									 <div class="main">
 										<div><h3 id="prodN1" class="name prodNTitle"></h3></div>
 										<div>
 											<img  id="card1itemImg" class=" itemIcon img-circle" src="images/index_circle.jpg"/>
 										</div>
-										<div class="spaceDRK"></div> 
+										<div class="spaceDRK"></div>
+										<div>
+											<span class="promHeadSpace">
+												<h5 id="prom1" class="prom name"><i class="text-muted pull-right"></i> Prom
+												</h5>
+											</span>
+										</div>										
 									</div>
-									<div class="secdFoot ">
-										<span>
-											<h5 ></i>
-												<table  class="prom">
-													<tr>
-														<td id="prom1"></td>
-													</tr>
-												</table>
-											</h5>
-										</span>
-										<span>
-											<a id="card1Shop"><img rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/></a>
-										</span>
-									</div>
+								</div>
+								<div class="shop">
+									<img id="card1Shop" rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/>
 								</div>
 							</div> <!-- end front panel -->
 							<div class="back BackBg" style="background-color:#222222;">
@@ -207,18 +201,17 @@
 										<div>
 											<img  id="card3itemImg" class=" itemIcon img-circle" src="images/index_circle.jpg"/>
 										</div>
-										<div class="spaceDRK"></div> 
+										<div class="spaceDRK"></div>
+										<div>
+											<span class="promHeadSpace">
+												<h5 id="prom3" class="prom name"><i class="text-muted pull-right"></i> Prom
+												</h5>
+											</span>
+										</div>										
 									</div>
-									<div class="secdFoot ">
-										<span>
-											<h5 id="prom3" class="prom"><i class="text-muted pull-right"></i> Prom
-											
-											</h5>
-										</span>
-										<span>
-											<a id="card3Shop"><img rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/></a>
-										</span>
-									</div>
+								</div>
+								<div class="shop">
+									<img id="card3Shop" rel="tooltip" title="Buy me!" class="btn btn-simple img-circle" src="images/card_buy.png"/>
 								</div>
 							</div> <!-- end front panel -->
 							<div class="back BackBg" style="background-color:#222222;">
@@ -265,7 +258,8 @@
 				</div> <!-- end col sm 3 -->
 				
 				<a onclick="shareFB()"  class="facebook shareBtn">
-					<i class=" fa fa-facebook-square  fa-fw fa-5x"></i>
+
+					<div><i class=" fa fa-facebook-square  fa-fw fa-5x"></i></div>
 					
 					<div style="margin-left:20px;color:#ffffff">分享出去!</div>
 				</a>
@@ -295,8 +289,8 @@ var action = ['加上','混合','搭配'];
 var adj = ['好棒棒', '好厲害', '猴塞雷', '好有事', '搖一搖','好壞壞'];
 				
 var RandomIndex = [6,4];
-var isDemo = true;
-var page2Only = false;
+var isDemo = 1;
+var page2Only = 0;
 
 var maxCardN = 4;
     $().ready(function(){
